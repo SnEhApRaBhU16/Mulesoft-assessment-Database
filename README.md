@@ -15,7 +15,7 @@ public class database {
 			System.out.println("not connected");
 			System.out.println(ex);
 			return null;
-		}
+			}
 	}
 	
 	
@@ -23,8 +23,7 @@ public class database {
 try {  
             Connection conn = DriverManager.getConnection(st);  
             if (conn != null) {  
-                  
-                System.out.println("A new database has been created.\n");  
+                 System.out.println("A new database has been created.\n");  
             }  
    
         } catch (SQLException e) {  
@@ -34,10 +33,8 @@ try {
 	
 	
 	public static void createNewTable() /*Method to create new table*/ {   
-                  
     String sql = "CREATE TABLE movie(MOV_NAME VARCHAR(20),ACTOR_NAME VARCHAR(20),ACTRESS_NAME VARCHAR(20),DIRECTOR VARCHAR(20),YEAR_OF_RELEASE INTEGER)";//create query
-      
-        try{  
+      try{  
             Connection conn = DriverManager.getConnection(st);  
             Statement stmt = conn.createStatement();  
             stmt.execute(sql);  //execute the query to create movie table
@@ -71,8 +68,7 @@ try {
 		     /*FIRST QUERY*/     
 		    System.out.println("\n\n (QUERY OUTPUT OF SELECTING ALL ROWS IN MOVIE TABLE)\n\n") ;
 		    String str = "SELECT * FROM movie";
-		       
-		        try{  
+		       try{  
 		            Connection conn = DriverManager.getConnection(st);  
 		            Statement stmt = conn.createStatement();
 		            
@@ -106,8 +102,7 @@ try {
 		        } catch (SQLException e) {  
 		            System.out.println(e.getMessage());  
 		        }  
-		    
-		  }   
+		     }   
     
 	public static void main(String[] args) {
 		connectdb();//call the method to connect to existing db
