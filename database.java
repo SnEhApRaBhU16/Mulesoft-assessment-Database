@@ -1,6 +1,6 @@
 import java.sql.*;
 public class database {
-	static String st = "jdbc:sqlite:C:/sqlite/Movieseeee.db";//location of new database to be created
+	static String st = "jdbc:sqlite:C:/sqlite/Movies.db";//location of new database to be created
 	
 	public static Connection connectdb(){/*a method to connect to existing db*/
 		try {
@@ -91,8 +91,8 @@ public class database {
 		            System.out.println(e.getMessage());  
 		        } 
 		        /*SECOND QUERY*/
-		        System.out.println("\n\n(QUERY OUTPUT OF SELECTING A ROW BASED ON PARTICULAR ACTOR (RajKumar Rao))\n\n") ;
-		        String str2 = "SELECT * FROM movie WHERE ACTOR_NAME='RajKumar Rao'";
+		        System.out.println("\n\n(QUERY OUTPUT OF SELECTING A MOVIE NAME BASED ON PARTICULAR ACTOR (RajKumar Rao))\n\n") ;
+		        String str2 = "SELECT MOV_NAME FROM movie WHERE ACTOR_NAME='RajKumar Rao'";
 			       
 		        try{  
 		            Connection conn = DriverManager.getConnection(st);  
@@ -102,10 +102,6 @@ public class database {
 		            while(rs.next())
 		            {
 		              System.out.print(rs.getString(1)+"\t");  //First Column
-		              System.out.print(rs.getString(2)+"\t");  //Second Column
-		              System.out.print(rs.getString(3)+"\t");  //Third Column
-		              System.out.print(rs.getString(4)+"\t");//Fourth Column
-		              System.out.print(rs.getString(5)+"\n\n");//Fifth Column
 		            }
 		         
 		        } catch (SQLException e) {  
@@ -133,3 +129,4 @@ public class database {
     	queriesop();//call the method to perform queries
 	}
 }
+
