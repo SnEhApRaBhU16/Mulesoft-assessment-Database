@@ -3,6 +3,11 @@
 
 
 
+
+
+
+
+
 import java.sql.*;
 public class database {
 	static String st = "jdbc:sqlite:C:/sqlite/Movies.db";//location of new database to be created
