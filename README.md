@@ -111,18 +111,14 @@ try {
     
 	public static void main(String[] args) {
 		connectdb();//call the method to connect to existing db
-		
 		createdb();//call the method to create new db
-		
 		createNewTable();//call the method to create new table in that db
-		
-    	insert("English Vinglish", "Mehdi Nebbou", "Shridevi", "Gauri Shinde", 2012);
+        insert("English Vinglish", "Mehdi Nebbou", "Shridevi", "Gauri Shinde", 2012);
     	insert("Login", "Himanshu Bhatt", "Radhika Roy", "Sanjeev Reddy", 2012);
     	insert("Secret Superstar", "Aamir Khan", "Zaira Wasim", "Advait Chandan", 2017);
     	insert("Chalaang", "RajKumar Rao", "Nushrat Bharucha", "Hansal Mehta", 2020);
     	insert("Baahubali", "Prabhas","Anushka Shetty","S S Rajamouli",2016);
     	insert("Dasvi","Abhishek Bachan","Yami Gautam","Tushar Jalota", 2022);//6 rows inserted
-    	
-    	queriesop();//call the method to perform queries
+    	        queriesop();//call the method to perform queries
 	}
 }
