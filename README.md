@@ -1,9 +1,5 @@
 # Mulesoft-assessment-Database
 Program to create a movie database having one table and queries to extract info from the table.
-
-
-
-
 import java.sql.*;
 public class database {
 	static String st = "jdbc:sqlite:C:/sqlite/Movies.db";//location of new database to be created
@@ -23,10 +19,8 @@ public class database {
 	}
 	
 	
-	
 	public static void createdb() /*method to create new database*/ {  
-		   
-    try {  
+try {  
             Connection conn = DriverManager.getConnection(st);  
             if (conn != null) {  
                   
@@ -52,7 +46,6 @@ public class database {
             System.out.println(e.getMessage());  
         }  
     }  
-	
 	
 	
 	public static void insert(String mov_name,String actor_name,String Actress_name,String Director,int Year) /*Method to insert
@@ -114,10 +107,8 @@ public class database {
 		            System.out.println(e.getMessage());  
 		        }  
 		    
-		    
-	    }   
+		  }   
     
-	
 	public static void main(String[] args) {
 		connectdb();//call the method to connect to existing db
 		
